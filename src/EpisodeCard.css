@@ -1,0 +1,114 @@
+/* Card do episódio */ 
+.episode-card {
+  background: linear-gradient(145deg, #1f1f1f, #292929);
+  border-radius: 16px;
+  box-shadow:
+    4px 4px 8px #161616,
+    -4px -4px 8px #2e2e2e;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 350px;
+}
+
+.episode-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    6px 6px 12px #111,
+    -6px -6px 12px #3c3c3c;
+}
+
+/* Imagem do episódio */
+.episode-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  user-select: none;
+  pointer-events: none;
+  border-bottom: 2px solid #6366f1;
+}
+
+/* Nome do episódio */
+.episode-info p:nth-child(2) {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #8ab4f8;
+  margin-bottom: 3px; /* antes 12px */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Textos informativos */
+.episode-info p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-bottom: 2px; /* antes 6px */
+  line-height: 1.3;
+  user-select: none;
+}
+
+/* Ações (botão assistir) */
+.episode-actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-top: 0;
+}
+
+/* Botões de ação */
+.action-btn {
+  flex: none !important;
+  padding: 4px 8px !important;
+  font-size: 0.85rem !important;
+  border-radius: 8px !important;
+  border: 1px solid #6366f1 !important;
+  background-color: #2d2d40 !important;
+  cursor: pointer !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  user-select: none;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.action-btn:hover {
+  background-color: #6366f1 !important;
+  border-color: #8ab4f8 !important;
+}
+
+.action-btn.active {
+  background-color: #6366f1 !important;
+  color: white !important;
+  border: 1px solid #8ab4f8 !important;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .episode-info p:nth-child(2),
+  .episode-title {
+    font-size: 1rem;
+  }
+
+  .episode-info p {
+    font-size: 0.85rem;
+  }
+
+  .action-btn {
+    font-size: 0.9rem;
+    padding: 6px 8px !important;
+  }
+}
+body {
+  background-image: url('https://wallpapercat.com/w/full/0/1/7/124947-3840x2160-desktop-4k-rick-and-morty-background-photo.jpg');
+  background-size: cover;        /* Preenche todo o espaço */
+  background-position: center;   /* Centraliza a imagem */
+  background-repeat: no-repeat;  /* Evita repetição */
+}
+
+

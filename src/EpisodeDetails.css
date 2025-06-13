@@ -1,0 +1,68 @@
+.episode-details {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #eee;
+}
+
+.episode-details h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #8ab4f8;
+}
+
+.episode-details p {
+  margin-bottom: 12px;
+}
+
+.character-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.character-card {
+  background: #1f1f2f;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  text-align: center;
+}
+
+.character-photo {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.character-info p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+}
+
+.character-name {
+  font-weight: 700;
+  color: #fff;
+}
+
+.character-species {
+  color: #aaa;
+}
+
+.character-status {
+  font-weight: 600;
+}
+
+.character-status.alive {
+  color: #4caf50;
+}
+.character-status.dead {
+  color: #f44336;
+}
+

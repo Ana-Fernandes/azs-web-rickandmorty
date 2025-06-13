@@ -1,0 +1,76 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #eee;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Input de busca */
+input[type="text"] {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 30px auto;
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: none;
+  background-color: #1e1e1e;
+  color: #eee;
+  box-shadow: 0 0 5px rgba(100, 100, 255, 0.6);
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 12px #6366f1;
+}
+
+/* Container da lista de episódios */
+.episode-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Botão carregar mais */
+button {
+  display: block;
+  margin: 30px auto 0 auto;
+  background-color: #6366f1;
+  color: #fff;
+  font-size: 1rem;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px #4f46e5cc;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4f46e5;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .episode-list {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 18px;
+  }
+
+  input[type="text"] {
+    max-width: 100%;
+  }
+}
